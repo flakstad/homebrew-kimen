@@ -10,7 +10,7 @@ class Kimen < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/flakstad/kimen/releases/download/v2026.6.22/kimen_2026.6.22_darwin_amd64.tar.gz"
-      sha256 "6c929bb805fa946f52dc3e11fa0c679f554bf91e987ec5ba084049abf57505e3"
+      sha256 "6520f8a9634ed4790f4f09b786e1ce3b3e9f910a3b80295e06243a4edea4c2ae"
 
       define_method(:install) do
         bin.install "kimen"
@@ -18,7 +18,7 @@ class Kimen < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/flakstad/kimen/releases/download/v2026.6.22/kimen_2026.6.22_darwin_arm64.tar.gz"
-      sha256 "e305c22726a872e20e9a384c0ca93e103bc5fd1d4d6d972d49e463d9dac2b3f1"
+      sha256 "1353424d9d633050a6c3f7ba5160a0a0fcbcfc606705a2ac586d634aade20b60"
 
       define_method(:install) do
         bin.install "kimen"
@@ -29,14 +29,14 @@ class Kimen < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/flakstad/kimen/releases/download/v2026.6.22/kimen_2026.6.22_linux_amd64.tar.gz"
-      sha256 "55d7d24059fb4628843cce4158d8ea42e5878116e4f7309456bbdb05ad4942a3"
+      sha256 "840cca016e57f036b306e017113619bf600d113a2fc595cd701924f96e2f61bc"
       define_method(:install) do
         bin.install "kimen"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/flakstad/kimen/releases/download/v2026.6.22/kimen_2026.6.22_linux_arm64.tar.gz"
-      sha256 "4fd4691040e77c1d872eaa9067fca8b0e3f712c9dfbd3f683bf1655170a17fb7"
+      sha256 "ed4b579891f7ee1f606aad4e9d8df7ac26963baa45eb32af16189c1a0c930053"
       define_method(:install) do
         bin.install "kimen"
       end
