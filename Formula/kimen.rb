@@ -5,22 +5,23 @@
 class Kimen < Formula
   desc "Local-first secrets tool"
   homepage "https://github.com/flakstad/kimen"
-  version "2026.6.22"
+  version "2026.6.23"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/flakstad/kimen/releases/download/v2026.6.22/kimen_2026.6.22_darwin_amd64.tar.gz"
-      sha256 "6520f8a9634ed4790f4f09b786e1ce3b3e9f910a3b80295e06243a4edea4c2ae"
+      url "https://github.com/flakstad/kimen/releases/download/v2026.6.23/kimen_2026.6.23_darwin_amd64.tar.gz"
+      sha256 "f3ee7b4cb68076bfe80a46e675c560d776b6c56e026451cffe6c27ed8b156ede"
 
-      define_method(:install) do
+      def install
         bin.install "kimen"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/flakstad/kimen/releases/download/v2026.6.22/kimen_2026.6.22_darwin_arm64.tar.gz"
-      sha256 "1353424d9d633050a6c3f7ba5160a0a0fcbcfc606705a2ac586d634aade20b60"
 
-      define_method(:install) do
+    if Hardware::CPU.arm?
+      url "https://github.com/flakstad/kimen/releases/download/v2026.6.23/kimen_2026.6.23_darwin_arm64.tar.gz"
+      sha256 "ae94ee2ab815d32c803b1dfc9fff3f1428dcbae1bb89e31ebed5eec174a079b4"
+
+      def install
         bin.install "kimen"
       end
     end
@@ -28,16 +29,19 @@ class Kimen < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/flakstad/kimen/releases/download/v2026.6.22/kimen_2026.6.22_linux_amd64.tar.gz"
-      sha256 "840cca016e57f036b306e017113619bf600d113a2fc595cd701924f96e2f61bc"
-      define_method(:install) do
+      url "https://github.com/flakstad/kimen/releases/download/v2026.6.23/kimen_2026.6.23_linux_amd64.tar.gz"
+      sha256 "42277f3acb94b6446feb6ca090713e2ac9534a2aa891178fb858d16593d7cd00"
+
+      def install
         bin.install "kimen"
       end
     end
+
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/flakstad/kimen/releases/download/v2026.6.22/kimen_2026.6.22_linux_arm64.tar.gz"
-      sha256 "ed4b579891f7ee1f606aad4e9d8df7ac26963baa45eb32af16189c1a0c930053"
-      define_method(:install) do
+      url "https://github.com/flakstad/kimen/releases/download/v2026.6.23/kimen_2026.6.23_linux_arm64.tar.gz"
+      sha256 "6c998ecfb88645ee4db8ec1912c35e9087e3c9ea74b96686d715ca51cd74d85f"
+
+      def install
         bin.install "kimen"
       end
     end
